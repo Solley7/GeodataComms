@@ -58,8 +58,8 @@ The table of contents for this file is outlined below>>>>>
 */
 /***** Default *****/
 :root {
-  --cityadsFontFamily: "PolySans", sans-serif;
-  --cityadsHeadingFontFamily: "Mango Grotesque", sans-serif;
+  --cityadsFontFamily: "Host Grotesk", sans-serif;
+  --cityadsHeadingFontFamily: "Host Grotesk", sans-serif;
   --cityadsPrimaryColor: #E70303;
   --cityadsWhiteColor: #ffffff;
   --cityadsBlackColor: #050505;
