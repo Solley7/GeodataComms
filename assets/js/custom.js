@@ -252,46 +252,6 @@
 		});
 	});
 
-    // Settings
-    $(document).ready(function () {
-        const themeSettingsHTML = `
-            <div class="theme-settings-menu">
-                <ul class="p-0 m-0 list-unstyled">
-                    <li>
-                        <a href="https://1.envato.market/cityads-html" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Buy Now">
-                            <i class="ri-shopping-cart-fill"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://nsatheme.com/support-portal/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Support">
-                            <i class="ri-customer-service-fill"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://demo.nsatheme.com/html/cityads/rtl/index.html" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="RTL Demo">
-                            <i class="ri-align-right"></i>
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="mailto:nsatheme@gmail.com" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Hire Us">
-                            <i class="ri-contacts-fill"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        `;
-        
-        // Append to body
-        $('body').append(themeSettingsHTML);
-
-        // Reinitialize Bootstrap tooltips
-        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-        tooltipTriggerList.forEach(function (tooltipTriggerEl) {
-            new bootstrap.Tooltip(tooltipTriggerEl);
-        });
-    });
-
     // Preloader
     $(window).on('load', function() {
         $('.preloader').hide();

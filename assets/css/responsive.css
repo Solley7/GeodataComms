@@ -140,6 +140,9 @@
   .navbar-area.style-three .navbar .light-dark-btn {
     right: 0;
   }
+  .navbar-area.style-four .navbar .light-dark-btn {
+    right: 45px;
+  }
   /***** Menu Popup *****/
   .menu-popup-area {
     padding-top: 50px;
@@ -327,6 +330,50 @@
   .banner-wrapper-content h1 {
     font-size: 90px;
     line-height: 0.85;
+  }
+  .banner-wrapper-content h1.style-two {
+    font-size: 60px;
+  }
+  .banner-wrapper-content p {
+    margin-top: 12px;
+  }
+  .banner-wrapper-content .banner-form {
+    max-width: 100%;
+    padding-right: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+  .banner-wrapper-content .banner-form .form-group-list {
+    border-right-width: 1px;
+    margin-right: 10px;
+  }
+  .banner-wrapper-content .banner-form .form-group-list .form-group {
+    width: 100%;
+    border-right-width: 0;
+    border-bottom-width: 1px;
+  }
+  .banner-wrapper-content .banner-form .form-group-list .form-group label {
+    right: 15px;
+  }
+  .banner-wrapper-content .banner-form .form-group-list .form-group .form-control {
+    height: 50px;
+    font-size: 15px;
+    letter-spacing: -0.16px;
+    color: var(--cityadsBlackColor);
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .banner-wrapper-content .banner-form .form-group-list .form-group .form-select {
+    background-position: right 15px center;
+    font-size: 15px;
+    height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .banner-wrapper-content .banner-form button {
+    width: 45px;
+    height: 45px;
   }
   .banner-wrapper-slides {
     margin-top: 25px;
@@ -772,6 +819,20 @@
   .solution-item .image img {
     border-radius: 15px;
   }
+  /***** Categories *****/
+  .category-item {
+    padding: 25px;
+  }
+  .category-item .icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin-bottom: 23px;
+  }
+  .category-item h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
   /***** What We Do *****/
   .what-we-do-images {
     padding-left: 12px;
@@ -958,6 +1019,14 @@
   }
   .project-item .content p {
     margin-top: 15px;
+  }
+  .project-item .content .info {
+    margin-top: 5px;
+  }
+  .project-item .content .info li {
+    padding-left: 23px;
+    margin-right: 15px;
+    margin-top: 10px;
   }
   /***** Project Details *****/
   .project-details-image {
@@ -2071,6 +2140,9 @@
   .navbar-area.style-three .navbar .light-dark-btn {
     right: 0;
   }
+  .navbar-area.style-four .navbar .light-dark-btn {
+    right: 50px;
+  }
   /***** Menu Popup *****/
   .menu-popup-area {
     padding-top: 80px;
@@ -2237,6 +2309,38 @@
   }
   .banner-wrapper-content h1 {
     font-size: 114px;
+  }
+  .banner-wrapper-content h1.style-two {
+    font-size: 90px;
+  }
+  .banner-wrapper-content p {
+    margin-top: 10px;
+  }
+  .banner-wrapper-content .banner-form {
+    max-width: 100%;
+    padding-right: 10px;
+    margin-top: 25px;
+    margin-bottom: 85px;
+  }
+  .banner-wrapper-content .banner-form .form-group-list .form-group label {
+    right: 20px;
+  }
+  .banner-wrapper-content .banner-form .form-group-list .form-group .form-control {
+    height: 70px;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .banner-wrapper-content .banner-form .form-group-list .form-group .form-select {
+    background-position: right 20px center;
+    font-size: 16px;
+    height: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .banner-wrapper-content .banner-form button {
+    width: 50px;
+    height: 50px;
   }
   .banner-wrapper-slides {
     margin-top: 25px;
@@ -2607,6 +2711,20 @@
   .solution-item .image {
     margin-top: 25px;
   }
+  /***** Categories *****/
+  .category-item {
+    padding: 30px;
+  }
+  .category-item .icon {
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+    margin-bottom: 27px;
+  }
+  .category-item h3 {
+    font-size: 28px;
+    margin-bottom: 13px;
+  }
   /***** What We Do *****/
   .what-we-do-images {
     padding-left: 25px;
@@ -2774,6 +2892,9 @@
   }
   .project-item .content p {
     margin-top: 17px;
+  }
+  .project-item .content .info li {
+    margin-right: 20px;
   }
   /***** Project Details *****/
   .project-details-desc {
@@ -3744,6 +3865,27 @@
   .banner-wrapper-content h1 {
     font-size: 150px;
   }
+  .banner-wrapper-content h1.style-two {
+    font-size: 110px;
+  }
+  .banner-wrapper-content p {
+    margin-top: 10px;
+  }
+  .banner-wrapper-content .banner-form {
+    max-width: 100%;
+  }
+  .banner-wrapper-content .banner-form .form-group-list .form-group label {
+    right: 25px;
+  }
+  .banner-wrapper-content .banner-form .form-group-list .form-group .form-control {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .banner-wrapper-content .banner-form .form-group-list .form-group .form-select {
+    background-position: right 25px center;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
   .banner-wrapper-slides {
     margin-top: 20px;
   }
@@ -4006,6 +4148,13 @@
   }
   .solution-item h3 {
     font-size: 42px;
+  }
+  /***** Categories *****/
+  .category-item {
+    padding: 35px;
+  }
+  .category-item h3 {
+    font-size: 34px;
   }
   /***** What We Do *****/
   .what-we-do-images {
@@ -4692,6 +4841,9 @@
   /***** Banner Wrapper *****/
   .banner-wrapper-content h1 {
     font-size: 180px;
+  }
+  .banner-wrapper-content h1.style-two {
+    font-size: 130px;
   }
   .banner-wrapper-slides {
     margin-top: -50px;
