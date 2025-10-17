@@ -58,9 +58,9 @@ The table of contents for this file is outlined below>>>>>
 */
 /***** Default *****/
 :root {
-  --cityadsFontFamily: "PolySans", sans-serif;
-  --cityadsHeadingFontFamily: "Mango Grotesque", sans-serif;
-  --cityadsPrimaryColor: #E70303;
+  --cityadsFontFamily: "Host Grotesk", sans-serif;
+  --cityadsHeadingFontFamily: "Host Grotesk", sans-serif;
+  --cityadsPrimaryColor: #D60B11;
   --cityadsWhiteColor: #ffffff;
   --cityadsBlackColor: #050505;
   --cityadsTransition: .5s;
@@ -582,6 +582,12 @@ p:last-child {
   padding-right: 22px;
   font-size: 18px;
   font-weight: 300;
+}
+.navbar-area .navbar .navbar-brand img {
+    display: block !important;
+    height: 50px !important; /* You can adjust this value */
+    width: auto !important;
+    opacity: 1 !important;
 }
 .navbar-area .navbar .nav-alternatives .item .search-box form .form-control::-moz-placeholder {
   color: var(--cityadsBlackColor);
@@ -5374,3 +5380,10 @@ p:last-child {
 .dark-mode .theme-settings-menu ul li a:hover {
   background-color: var(--cityadsPrimaryColor);
 }/*# sourceMappingURL=style.css.map */
+/* Adjust letter-spacing for all elements using Host Grotesk */
+body, h1, h2, h3, h4, h5, h6, p, a, span, div, .font-heading,
+.primary-btn, .secondary-btn, .optional-btn, .section-title h2, .funfact-item h3,
+.navbar-area .navbar-nav .nav-item .nav-link, .top-header-info ul li {
+    letter-spacing: normal !important; /* Reset to browser default */
+    word-spacing: normal !important;
+}
