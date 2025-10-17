@@ -1029,7 +1029,6 @@ p:last-child {
 /***** Main Banner *****/
 .main-banner-area {
   padding-left: 30px;
-  padding-top: 160px;
   padding-right: 30px;
 }
 
@@ -5386,4 +5385,153 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, div, .font-heading,
 .navbar-area .navbar-nav .nav-item .nav-link, .top-header-info ul li {
     letter-spacing: normal !important; /* Reset to browser default */
     word-spacing: normal !important;
+}
+/* NEW BANNER SLIDESHOW STYLES */
+.main-banner-area {
+    position: relative;
+    overflow: hidden; /* To ensure no overflow */
+}
+.main-banner-area .main-slides .single-banner-item {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px; /* Adjust banner height as needed */
+    position: relative;
+    z-index: 1;
+}
+.main-banner-area .main-slides .single-banner-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for text readability */
+    z-index: -1;
+}
+.main-banner-area .main-slides .single-banner-item .d-table {
+    width: 100%;
+    height: 100%;
+}
+.main-banner-area .main-slides .single-banner-item .main-banner-content {
+    max-width: 900px; /* Limit content width */
+    margin: 0 auto;
+    color: #ffffff; /* White text for readability */
+    position: relative;
+    z-index: 2;
+}
+.main-banner-area .main-slides .single-banner-item .main-banner-content h1 {
+    font-size: 68px; /* Slightly smaller for slides, adjust as needed */
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Text shadow for better contrast */
+}
+.main-banner-area .main-slides .single-banner-item .main-banner-content p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+.main-banner-area .main-slides .owl-nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+    font-size: 30px;
+    border-radius: 50%;
+    transition: var(--cityadsTransition);
+    opacity: 0.8;
+}
+.main-banner-area .main-slides .owl-nav button.owl-prev {
+    left: 30px;
+}
+.main-banner-area .main-slides .owl-nav button.owl-next {
+    right: 30px;
+}
+.main-banner-area .main-slides .owl-nav button:hover {
+    background-color: var(--cityadsPrimaryColor) !important;
+    opacity: 1;
+}
+.main-banner-area .main-slides .owl-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 100%;
+}
+.main-banner-area .main-slides .owl-dots .owl-dot span {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    transition: var(--cityadsTransition);
+}
+.main-banner-area .main-slides .owl-dots .owl-dot.active span {
+    background-color: var(--cityadsPrimaryColor);
+    border-color: var(--cityadsPrimaryColor);
+    transform: scale(1.2);
+}
+/* Responsive Adjustments for Main Banner Slideshow */
+/* Responsive Adjustments for Main Banner Slideshow */
+
+/* Tablet breakpoint (991px and down) */
+@media (max-width: 991px) {
+    .main-banner-area {
+         margin-top: 0 !important; /* Ensure no negative margin here */
+    }
+    .main-banner-area .main-slides .single-banner-item {
+        height: 450px !important; /* Adjust slide height for tablets */
+    }
+    .main-banner-area .main-slides .single-banner-item .main-banner-content h1 {
+        font-size: 45px !important; /* Adjust heading size */
+    }
+    .main-banner-area .main-slides .single-banner-item .main-banner-content p {
+        font-size: 17px !important; /* Adjust paragraph size */
+        max-width: 90%;
+    }
+    /* Adjust vertical positioning of content inside the slide */
+    .main-banner-area .main-slides .single-banner-item .d-table-cell {
+         vertical-align: middle; /* Ensure vertical centering */
+         padding-top: 40px !important; /* Push content down slightly if needed */
+         padding-bottom: 40px !important;/* Add bottom padding */
+    }
+    .main-banner-area .main-slides .owl-nav {
+         display: none;
+    }
+}
+
+/* Mobile breakpoint (767px and down) */
+@media (max-width: 767px) {
+ 
+    .main-banner-area {
+        margin-top: 0 !important; /* Ensure no negative margin here */
+    }
+    .main-banner-area .main-slides .single-banner-item {
+        height: 400px !important; /* Further reduce slide height for mobile */
+    }
+    .main-banner-area .main-slides .single-banner-item .main-banner-content h1 {
+        font-size: 30px !important; /* Adjust heading size for mobile */
+    }
+    .main-banner-area .main-slides .single-banner-item .main-banner-content p {
+        font-size: 15px !important; /* Adjust paragraph size for mobile */
+        max-width: 95%;
+    }
+    /* Adjust vertical positioning of content inside the slide */
+    .main-banner-area .main-slides .single-banner-item .d-table-cell {
+        vertical-align: middle; /* Ensure vertical centering */
+        padding-top: 30px !important; /* Push content down slightly if needed */
+        padding-bottom: 30px !important;/* Add bottom padding */
+    }
+    .main-banner-area .main-slides .owl-dots {
+         bottom: 10px; /* Adjust dot position if needed */
+         /* display: none; */ /* Optionally hide dots on mobile */
+    }
 }

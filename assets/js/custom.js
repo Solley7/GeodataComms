@@ -256,5 +256,33 @@
     $(window).on('load', function() {
         $('.preloader').hide();
     });
-
+// Main Banner Slides
+$('.main-slides').owlCarousel({
+    loop: true,
+    nav: true,
+    dots: true,
+    autoplayHoverPause: true,
+    autoplay: true,
+    smartSpeed: 1000,
+    animateOut: 'fadeOut', // Add animation for smoother transitions
+    animateIn: 'fadeIn',  // Add animation for smoother transitions
+    items: 1,
+    navText: [
+        "<i class='ri-arrow-left-s-line'></i>",
+        "<i class='ri-arrow-right-s-line'></i>"
+    ],
+    responsive: {
+        0: {
+            dots: false, // Hide dots on small screens
+            nav: false // Hide nav arrows on small screens
+        },
+        768: {
+            dots: true,
+            nav: false
+        },
+        992: {
+            nav: true
+        }
+    }
+});
 })();
