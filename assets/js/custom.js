@@ -253,9 +253,27 @@
 	});
 
     // Preloader
-    $(window).on('load', function() {
-        $('.preloader').hide();
-    });
+$(window).on('load', function() {
+    // Determine the desired total display time for the GIF/preloader
+    // This value includes any page load time + additional desired delay.
+    // Let's say you want it to show for a total of 3 seconds *after* the page is fully loaded.
+    const GIF_DISPLAY_DURATION = 3000; // 3000 milliseconds = 3 seconds
+
+    // And how long you want the fade-out transition to take
+    const FADE_OUT_DURATION = 1000; // 1000 milliseconds = 1 second
+
+    // Set a timeout to add the 'preloader-hide' class after the desired display duration
+    // This will trigger the CSS fade-out.
+    setTimeout(function() {
+        $('.preloader').addClass('preloader-hide');
+
+        // After the fade-out transition completes, completely hide the element.
+        setTimeout(function() {
+            $('.preloader').hide(); // This sets display: none;
+        }, FADE_OUT_DURATION);
+
+    }, GIF_DISPLAY_DURATION);
+});
 // Main Banner Slides
 $('.main-slides').owlCarousel({
     loop: true,

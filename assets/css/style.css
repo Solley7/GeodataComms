@@ -300,10 +300,21 @@ p:last-child {
 }
 
 /***** Preloader *****/
+
 .preloader {
   z-index: 999999;
   background-color: var(--cityadsWhiteColor);
 }
+.preloader.preloader-hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Allow clicks on content underneath */
+    opacity: 1; /* Start fully visible */
+    visibility: visible; /* Start visible */
+    transition: opacity 1s ease-out, visibility 1s ease-out; /* HERE: This '1s' MUST match FADE_OUT_DURATION in JS */
+    pointer-events: all;
+}
+/*
 .preloader .loader {
   padding: 5px;
   margin-bottom: 20px;
@@ -313,15 +324,12 @@ p:last-child {
 }
 .preloader .loader::after, .preloader .loader::before {
   content: "";
-  height: 40px;
+  height: 150px;
   grid-area: 1/1;
   aspect-ratio: 3;
   clip-path: inset(0 100% 0 0);
-  animation: l15 1.5s infinite linear;
+  animation: l15 3.5s infinite linear;
   --c: var(--cityadsWhiteColor) 64%, var(--cityadsBlackColor) 66% 98%, var(--cityadsWhiteColor) 101%;
-  background: radial-gradient(35% 146% at 50% 159%, var(--c)) 0 0, radial-gradient(35% 146% at 50% -59%, var(--c)) 100% 100%;
-  background-size: 66.6666666667% 50%;
-  background-repeat: repeat-x;
 }
 .preloader .loader:after {
   scale: -1 1;
@@ -685,7 +693,7 @@ p:last-child {
 /***** Menu Popup *****/
 .menu-popup-area {
   opacity: 0;
-  z-index: 101;
+  z-index: 10000;
   padding-top: 60px;
   visibility: hidden;
   word-spacing: normal;
@@ -899,6 +907,7 @@ p:last-child {
   right: 100px;
   width: 42px;
   top: 70px;
+
 }
 .menu-popup-area .menu-popup-close-btn i {
   left: 0;
@@ -1030,6 +1039,10 @@ p:last-child {
 .main-banner-area {
   padding-left: 30px;
   padding-right: 30px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
 }
 
 .main-banner-image {
@@ -5534,4 +5547,90 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, div, .font-heading,
          bottom: 10px; /* Adjust dot position if needed */
          /* display: none; */ /* Optionally hide dots on mobile */
     }
+}
+@media (max-width: 991.98px) {
+    .navbar-area .navbar {
+        display: flex;
+        flex-wrap: nowrap; /* Keep logo, toggle, hamburger on one line */
+        justify-content: space-between; /* Push logo left, button group right */
+        align-items: center; /* Vertically center all items */
+        padding: 10px 15px; /* Add some overall padding */
+    }
+
+    /* Target the logo */
+    .navbar-area .navbar-brand {
+        margin-right: auto; /* Pushes everything else to the right */
+        flex-shrink: 0; /* Prevent the logo from shrinking */
+        display: flex; /* Make logo itself a flex container for its image */
+        align-items: center; /* Vertically center the image if needed */
+        height: auto; /* Allow natural height */
+    }
+    .navbar-area .navbar-brand img {
+        max-height: 40px; /* Adjust logo height if it's too large or small */
+        width: auto;
+    }
+
+
+    /* Create a new flex container specifically for the right-side buttons */
+    .navbar-actions-right {
+        display: flex;
+        align-items: center; /* Vertically center toggle and hamburger within this group */
+        margin-left: auto; /* This helps ensure they stick to the right edge */
+        flex-shrink: 0; /* Prevent this group from shrinking */
+    }
+
+    /* Target the light/dark mode button */
+    .navbar-area .light-dark-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px; /* Adjust padding as needed */
+        margin-left: 0; /* Remove any default left margin */
+        margin-right: 10px; /* Space between dark mode toggle and hamburger */
+        height: auto;
+        width: auto;
+        font-size: 24px; /* Ensure the icon is a good size */
+    }
+
+    /* Target the hamburger toggler button */
+    .navbar-area .navbar-toggler {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px; /* Adjust padding as needed */
+        margin-left: 0; /* Remove any default left margin */
+        height: auto;
+        width: auto;
+    }
+
+    /* Ensure the actual menu content is hidden on mobile until toggled */
+    .navbar-area .collapse:not(.show) {
+        display: none !important;
+    }
+
+    /* Keep the search and menu alternatives within the collapsed section */
+    .navbar-area #navbarSupportedContent {
+        width: 100%;
+        order: 4; /* Pushes it below the main header line */
+    }
+
+    /* Styling for the hamburger lines */
+    .navbar-area .navbar-toggler .toggler-menu {
+        width: 30px;
+        height: 25px;
+        position: relative;
+        display: block;
+    }
+    .navbar-area .navbar-toggler .toggler-menu span {
+        display: block;
+        height: 2px;
+        background-color: currentColor;
+        position: absolute;
+        left: 0;
+        right: 0;
+        transition: all 0.3s ease-in-out;
+    }
+    .navbar-area .navbar-toggler .toggler-menu span:nth-child(1) { top: 0; }
+    .navbar-area .navbar-toggler .toggler-menu span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+    .navbar-area .navbar-toggler .toggler-menu span:nth-child(3) { bottom: 0; }
 }
